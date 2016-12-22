@@ -1,0 +1,50 @@
+[1]how to resolve merge conflicts?
+-->To resolve a merge conflict caused by competing changes to a file, where a person deletes a file in one branch and another person edits the same file, you must choose whether to delete or keep the removed file in a new commit
+For example, if you edited a file, such as README.md, and another person removed the same file in another branch in the same Git repository, you'll get a merge conflict error when you try to merge these branches. You must resolve this merge conflict with a new commit before you can merge these branches.
+
+[2]what is html? how to create a html document?
+-->Hyper Text Markup language
+hyper text is the method by which we move around the web by clikcking on special text called "hyperlinks". Markup is what HTML tags do the text inside them.HTML is a language as it has sode and syntax.
+methods to create html document.
+start notepad++
+open a new file and save it as .html file
+wirte the code and save it
+run the saved file to open html page
+
+
+[3]what is doctype?
+-->a document type declaration or Doctype is an instruction that associates with particular webpage.
+
+[4]what is tag and element in html?
+-->HTML tags are the hidden keywords within a web page that define how the browser must format and display the content.
+Most tags must have two parts, an opening and a closing part. For example, <html> is the opening tag and </html> is the closing tag. Note that the closing tag has the same text as the opening tag, but has an additional forward-slash ( / ) character
+An HTML element usually consists of a start tag and end tag, with the content inserted in between:
+
+<tagname>Content goes here...</tagname>
+The HTML element is everything from the start tag to the end tag:
+
+<p>My first paragraph.</p>
+
+[5]what is an attribute in html?
+-->All HTML elements can have attributes
+Attributes provide additional information about an element
+Attributes are always specified in the start tag
+Attributes usually come in name/value pairs like: name="value"
+
+[6]html code
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>This is a website</title>
+
+</head>
+
+<body>
+
+<h1>welcome</h1>
+
+<p> HTML is a ui language </p>
+
+</body>
+</html>

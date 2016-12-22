@@ -1,0 +1,90 @@
+git clone
+Makes a Git repository copy from a remote source. Also adds the original location as a remote so you can fetch from it again and push to it if you have permissions. 
+
+
+git init
+Initializes a git repository – creates the initial ‘.git’ directory in a new or in an existing project. 
+
+
+git add
+Adds files changes in your working directory to your index. 
+
+
+git mv
+In the first form, it renames <source>, which must exist and be either a file, symlink or directory, to <destination>. In the second form, the last argument has to be an existing directory; the given sources will be moved into this directory.
+The index is updated after successful completion, but the change must still be committe
+
+
+git reset
+Resets your index and working directory to the state of your last commit. 
+
+
+git rm
+Removes files from your index and your working directory so they will not be tracked. 
+
+
+git bisect
+This command uses a binary search algorithm to find which commit in your project’s history introduced a bug. You use it by first telling it a "bad" commit that is known to contain the bug, and a "good" commit that is known to be before the bug was introduced
+
+
+git grep
+Lets you search through your trees of content for words and phrases
+
+
+git log
+The command takes options applicable to the git rev-list command to control what is shown and how, and options applicable to the git diff-* commands to control how the changes each commit introduces are shown.
+
+
+git show
+Shows one or more objects (blobs, trees, tags and commits)
+For commits it shows the log message and textual diff. 
+For tags, it shows the tag message and the referenced objects.
+For trees, it shows the names 
+For plain blobs, it shows the plain contents.
+
+
+git status
+Displays paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git 
+
+
+git branch
+Lists existing branches, including remote branches if ‘-a’ is provided. Creates a new branch if a branch name is provided.
+
+
+git checkout
+Updates files in the working tree to match the version in the index or the specified tree. If no paths are given, git checkout will also update HEAD to set the specified branch as the current branch
+
+
+git commit
+Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch to point to that new commit
+
+
+git diff
+Show changes between the working tree and the index or a tree, changes between the index and a tree, changes between two trees, changes between two blob objects, or changes between two files on disk.
+
+
+git merge
+Merges one or more branches into your current branch and automatically creates a new commit if there are no conflicts.
+
+
+git rebase
+If <branch> is specified, git rebase will perform an automatic git checkout <branch> before doing anything else. Otherwise it remains on the current branch.
+
+
+
+git tag
+Tags a specific commit with a simple, human readable handle that never moves
+
+
+git fetch
+Fetches all the objects from the remote repository that are not present in the local one. 
+
+
+git pull
+Fetches the files from the remote repository and merges it with your local one. This command is equal to the git fetch and the git merge sequence
+
+
+git push
+Pushes all the modified local objects to the remote repository and advances its branches
+You can make interesting things happen to a repository every time you push into it, by setting up hooks there.
+

@@ -1,0 +1,102 @@
+
+Version Control Tools:
+	Version control systems are a category of software tools that help a software team manage changes to source code over time.
+	Version control software keeps track of every modification to the code in a special kind of database
+	Changes are usually identified by a number or letter code, termed the "revision number", "revision level", or simply "revision". For example, an initial set of files is "revision 1". When the first change is made, the resulting set is "revision 2", and so on.
+	Why should we care?  It allows you to revert files back to a previous state, revert the entire project back to a previous state, compare changes over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more
+	 Instead of recording each change individually, the version control system will wait for you to submit your changes as a single collection of actions. In version control, this collection of actions is known as a commit.
+	To qualify for inclusion in the Version Control System category, a product must:
+•	Provide a mechanism for developers to keep track of code changes
+•	Allow developers to see a history of changes
+•	Allow developers to work on the same code files at the same time
+•	Allow developers to isolate their code through branching
+•	Merge code from different branches on command
+•	Show developers conflicts on code merges and allow developers to resolve them
+•	Allow developers to revert their changes to a previous state
+
+
+Repository
+	In information technology, a repository is a central place in which an aggregation of data is kept and maintained in an organized way, usually in computer storage.
+	This is usually done when there is a 'higher purpose' for the data, but the data items needed to do this reside on different databases. In these cases, a repository is necessary to bring together the discrete data items and operate on them as one.
+	A repository contains three primary elements — a trunk, branches, and tags. The trunk contains the current version of a software project. This may include multiple source code files, as well as other resources used by the program. Branches are used to store new versions of the program. A developer may create a new branch whenever he makes substantial revisions to the program. If a branch contains unwanted changes, it can be discontinued. Otherwise, it can be merged back into the trunk as the latest version. Tags are used to save versions of a project, but are not meant for active development.
+	By committing changes to a repository, developers can quickly revert to a previous version of a program if a recent update causes bugs or other problems.
+	Repository is nothing but just like a folder with some extensions of memorizing lot of information. This contain subfolders in which the data is saved or memorized in .git file. If we delete the file the history which is memorize in those folders will be lost.
+
+why do we need to use repository in software development?
+	A software repository is a storage location from which software packages may be retrieved and installed on a computer.
+	The most important point to keep in mind when choosing a repository, is that a repository only serves its purpose in the present. You must regularly review the provision from your repository in case you need to migrate to another service in the future.
+	Proxy remote benefits:
+•	The ability to proxy a remote repository and cache artifacts
+•	Saving both bandwidth
+•	Time required to retrieve a software artifact from a remote repository
+	Host artifacts:
+•	Host artifacts that are not available in other repositories
+•	Providing an organization target for software artifacts
+
+
+What is GIT?
+	Git is, first and foremost, a version control system (VCS). There are many version control systems out there: CVS, SVN, Mercurial, Fossil, and, of course, Git
+	Git allows a team of people to work together, all using the same files. And it helps the team cope with the confusion that tends to happen when multiple people are editing the same files.
+	 It starts out simple: you have your version, and you send it to your partner. They make some changes, so now there are two versions, and send the suggestions back to you. You integrate their changes into your version, and now there is one version again.
+	The raw performance characteristics of Git are very strong when compared to many alternatives. Committing new changes, branching, merging and comparing past versions are all optimized for performance.
+	The content of the files as well as the true relationships between files and directories, versions, tags and commits, all of these objects in the Git repository are secured with a cryptographically secure hashing algorithm called SHA1. This protects the code and the change history against both accidental and malicious change and ensures that the history is fully traceable.
+	Version control software allows you to have “versions” of a project, which show the changes that were made to the code over time, and allows you to backtrack if necessary and undo those changes. This ability alone – of being able to compare two versions or reverse changes, makes it fairly invaluable when working on larger projects
+
+
+
+
+
+
+
+GITHUB:
+	 Git is a “version control system,” what’s that mean? When developers are creating something (an application, for example), they are making constant changes to the code and releasing new versions, up to and after the first official (non-beta) release.
+	 Git is a command-line tool, but the center around which all things involving Git revolve – effectively, the Hub, is GitHub.com, where developers can store their projects and network with likeminded people.
+	if you're not hosting your source code on GitHub right now, your open source project pretty much doesn't exist. I have a lot of respect for solutions like Launchpad and BitBucket, but GitHub is still the place to go if you need a place to store and share your source code.
+	Although you can run your own Git server locally, Github is both a remote server, a community of developers, and a graphical web interface for managing your Git project
+	GitHub takes this a step further by encouraging developers to fork a project's repository and then use that as their own centralized repository. From there they can send "pull requests" to the main project with their changes and then the project maintainers can review them before deciding whether to include them in their project or not.
+
+
+
+
+
+Differences between git and github:
+	Git is a version control system that tracks your changes when working with electronic media, such as software applications. GitHub is a repository for this media and nothing more.
+	In git entire history fa a git repository resides with each user who has access to it. It does not require any remote servers ofr this operation.github is extended level of git. Github provides a link between them for code review.
+	Git is like series of commits of our code. Github is a webpage on which you can publish your Git repositories and collaborate with other people. 
+
+
+
+
+
+pull, push and commit in git:
+	Use git push to push commits made on your local branch to a remote repository. The git push command takes two arguments:
+•	A remote name, for example, origin
+•	A branch name, for example, master
+	When the command line does not specify where to push with the argument , it defaults to origin.
+git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]
+	   [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
+	   [-u | --set-upstream] [--push-option=<string>]
+	   [--[no-]signed|--sign=(true|false|if-asked)]
+	   [--force-with-lease[=<refname>[:<expect>]]]
+	   [--no-verify] [<repository> [<refspec>…]]
+	git-pull - Fetch from and integrate with another repository or a local branch
+git pull [options] [<repository> [<refspec>…]]
+	 git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch heads into the current branch.
+	git-commit - Record changes to the repository
+git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+	   [--dry-run] [(-c | -C | --fixup | --squash) <commit>]
+	   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+	   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+	   [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+	   [-i | -o] [-S[<keyid>]] [--] [<file>…]
+	Stores the current contents of the index in a new commit along with a log message from the user describing the changes.
+
+
+merge conflicts:
+	When you combine two branches it is called a merge. You can see this when you make a PullRequest on GitHub or just merge your feature branch into your master/development branch. There are two types of merges Git can perform:
+•	Fast forward: This is the easiest one, you simply made some commits on your feature branch and nothing big happened on your base branch (e.g. master). Git takes all the commits you made on your feature branch and puts them on top of your base branch. No extra commits are made and no merge conflicts arise.
+•	A merge with a merge commit: You may have seen this commit around Merge branch 'feature/my-feature' into 'master'. This is a real merge commit, combining two branches into one. This commit specifies which 2 commits SHAs are being merged and is written on top of your base branch. This state can go well, like it does when you do a Pull Request or it can result in a merge conflict leaving it to the user to resolve the conflicts and proceed with the merge. Once you finished resolving the conflicts, you commit the files and Git prepopulates the commit message for you.
+	Merge conflicts may occur if competing changes are made to the same line of a file or when a file is deleted that another person is attempting to edit.
+	To resolve merge conflicts is to edit the current branch that you have checked out.
+	The second way is to use the “use theirs” or “use mine” built in tools of atlassian source tree.
+
