@@ -1,0 +1,130 @@
+[1]how to create a list in html? orderlists and unorderlidts?
+==>these are the steps to cretate 
+a)open a simple text editing program such as notepad++ or word on your pc
+b)type all preceding HTML text that we want
+c)determine the format in which way it should look like(orderlist or unorderlist)
+==>Orderlist:
+a)type all the preceding HTML text
+b)then type the orderlist opening tag, with <ol>
+c)now type the list item opening tag, with <li>
+d)repeat the previous step untill all the items are concluded
+e)then close each listitem  tag with </li> and orderlist with </ol>
+f)finally close all the preceeding HTML tags.
+<!DOCTYPE html>
+<html>
+<body>
+<ol>
+<li>first listitem</li>
+<li>second listitem</li>
+<li>third listitem</li>
+</ol>
+</body>
+</html>
+==>unorderlist:
+a)type all the preceding HTML text
+b)then type the unorderlist opening tag, with <ul>
+c)now type the list item opening tag, with <li>
+d)repeat the previous step untill all the items are concluded
+e)then close each listitem  tag with </li> and orderlist with </ul>
+f)finally close all the preceeding HTML tags.
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+<li>first listitem</li>
+<li>second listitem</li>
+<li>third listitem</li>
+</ul>
+</body>
+</html>
+
+[2]how to include images in html?
+==>a)open a simple text editing program such as notepad++ or word on your pc
+b)type all preceding HTML text that we want
+c)for the image code we use img tag and source tag (src) obiviously locating the image to the browser
+d)then close the tags 
+<html>
+<head>
+<title>my webpage</title>
+</head>
+<body>
+<img src="welcome.jpg" alt="welcome page"/>
+<h1>welcome to mywebpage</h1>
+here is a link to 
+<a href="webpage2.html">my webpage2</a>
+</body>
+</html>
+
+
+[3]how to take user input in html?
+==>a)open a simple text editing program such as notepad++ or word on your pc
+b)type all preceding HTML text that we want
+c)ofr the input we use form tag, which has two inputs and one submit button
+d)for the user name we use input type as text and name as user
+e)fir the password the input type password(hidden)
+and name aspassword
+f)for submit button the input assubmit and name as submit
+<html>
+<head>
+<title>my webpage2</title>
+</head>
+<body>
+<img src="welcome.jpg" alt="welcome page"/>
+<h1>welcome to mywebpage2</h1>
+<form action="index.php" method="post">
+user name<input type="text" name="user" />
+password<input type="password" name="password" />
+<input type="submit" value="submit" />
+</form>
+here is a link to 
+<a href="webpage.html">my webpage</a>
+</body>
+</html>
+
+
+
+
+
+
+[4]how to have links to different web pages and links to different part of some webpage?
+==>a)open a simple text editing program such as notepad++ or word on your pc
+b)type all preceding HTML text that we want
+c)enter the head tag with <h1> and content, then clso it with</h1>
+d)now for the link we use a tag which defines anchor and this crestes a lik to another website or webpage on your own website and to do this we use href attribute which specifies ink destination.
+<html>
+<head>
+<title>my webpage2</title>
+</head>
+<body>
+<h1>welcome to mywebpage2</h1>
+here is a link to 
+<a href="webpage.html">my webpage</a>
+</body>
+</html>
+
+[5]what is head, body, html element and why do we need them in page?
+==>The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag.The <head> element can include a title for the document, scripts, styles, meta information, and more.The following tags describe metadata: <title>, <style>, <meta>, <link>, <script>, and <base>.
+==>The <body> tag defines the document's body.
+The <body> element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.
+==>The <html> element defines the whole document.
+It has a start tag <html> and an end tag </html>.
+The element content is another HTML element (the <body> element).
+
+
+[6]what are semantic element, describe about each one of them?
+==>Semantic elements = elements with a meaning
+<article>	Defines an article
+<aside>	    Defines content aside from the page content
+<details>	Defines additional details that the user can view or hide
+<figcaption>	Defines a caption for a <figure> element
+<figure>	 Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+<footer>	 Defines a footer for a document or section
+<header>	 Specifies a header for a document or section
+<main>	     Specifies the main content of a document
+<mark>     	Defines marked/highlighted text
+<nav>	    Defines navigation links
+<section>	Defines a section in a document
+<summary>	Defines a visible heading for a <details>    element
+<time>   	Defines a date/time
+
+
