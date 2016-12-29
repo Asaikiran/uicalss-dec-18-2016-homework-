@@ -1,0 +1,233 @@
+[1]explain all inputs with examples?
+input tag is used an input element, which allows user to input the data. here are few input types
+
+=>input type='text' definestext input
+<form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname">
+</form>
+
+=>input type='password' defines password field
+<form>
+  User name:<br>
+  <input type="text" name="username"><br>
+  User password:<br>
+  <input type="password" name="psw">
+</form>
+
+=>input type="submit" defines a button for submitting data
+<form>
+  First name:<br>
+  <input type="text" name="firstname" value="sai"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="kiran"><br>
+  <input type="submit" value="Submit">
+</form>
+
+=>input type="reset" which ill reset all values to their default values
+<form>
+  First name:<br>
+  <input type="text" name="firstname" value="sai"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="kiran"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+
+=>input type="radio" alows  user to select only ONE option among all.
+<form>
+  <input type="radio" name="intrested" value="yes">yes<br>
+  <input type="radio" name="intrested" value="no"> no<br>
+</form>
+
+=>input type="checkbox" allows user to select mulitple options at the same time.
+<form>
+  <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle2" value="Car"> I have a car 
+</form>
+
+=>input type="button" uses to crete a clickable button
+<input type="button" value="Click me">
+
+=>input type="range" is used to enter a value in between th reange
+<form>
+  <input type="range" name="points" min="0" max="10">
+</form> 
+
+=>input type="date" determines th date of birth of the user
+<form>
+  Date of Birth:
+  <input type="date" name="bday">
+</form>
+
+=>input type="search" allows for search fields
+<form>
+  Search Google:
+  <input type="search" name="googlesearch">
+</form>
+
+[2]explain all input attributes
+==>The value Attribute specifies the intial value ofr an input field
+=>The readonly attribute allows the user to read only. it cannot be changed
+<form>
+=>The disabled attribute allows the input is disabled. it is unuasble or unclickable
+=>The size attribute specifies the size
+=>The maxlength attribute specifies the max length of the input
+=>The autocomplete attribute specifies the input field to have autocomplete on or off. Browser automatically fills the input field based on the user has entered before.
+The novalidate attribute specifies the data form should not be validated when submitted
+=>The autofocus attribute gets automatically focus when the page loads.
+=>the form attribute refers to one or more input elements
+The formaction attribute specifies the url of a file which process input control when the form is submitted
+the formenctype attribute specifies jow the data should be encoded when submitted. this is only for the form with method="post"
+=>height attribute refers height of an image
+=>width attribute refers width of an image
+=>list attribute refers options for an input element
+=>min and max attributes refers to min and max value of an input element like number,range,time...
+=>multiple attribute allows user to enter one or more input elements
+=>The required attribute specifies that an input must be filled before submitting the form like text,password,...
+=>step attribute define the interval between the inputs
+
+
+[3]What are Semantic Elements?
+==>Semantic Elements clealy represnts what the element contains
+=>HTML5 semantic elements are supported in all modern browsers.
+=>semantic elements like <header>,<table>,<article>,<footer> defines different parts of the web page
+=>with these HTML5 elemts its easy to identify the webpage content
+=>in HTML4 developers used their style elements which made diffuclut for search engines to identify the correct content.
+=>
+
+[4]diff between article, section, div
+=>article tag specifies independent, self contained content
+=>An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+
+=>section elements represents a generic section of a document/article.
+=>they appear as an entry in an outline of the page
+Examples of sections are chapters,headers, footers...
+
+=>div elments refers a division/ group block elements
+=>it can be used with class, lang, title attributes to mark up semantics common to a group of consecutive elements.
+=>On the other hand, div elements can be useful for stylistic purposes or to wrap multiple paragraphs within a section that are all to be annotated in a similar way.
+
+
+[5] explain with exmaples about <article>, <aside>, <details>, <figcaption>, <figure>, <footer>, <header>, <main>, <mark>, <nav>, <section>, <summary>, <time>
+=><article> refers to self contained content so hat it can display the content independently with rest if the page
+<article>
+  <h1>my webpage</h1>
+  <p>this is the webpage created by me</p>
+</article>
+
+=><aside>The <aside> tag defines some content aside from the content it is placed in.
+<body>
+<aside>
+  <p>Text that appears under aside</p>
+</aside>
+</body>
+
+=><details> will have additional detalis thay the user can open and close. 
+=>it could be anything inside the details tag 
+<details>
+  <summary>Some details</summary>
+  <p>More info about the details.</p>
+</details>
+
+=><figcaption> definbes a caption for a figure
+<figure>
+  <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">  
+  <figcaption>Fig1. MDN Logo</figcaption>
+</figure>
+
+=><figure> uses to include images
+<figure>
+  <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+</figure>
+
+=><footer> defines the footer for a document. it caontains like copyright information,contact information....
+
+=><header> represents the introduction or headings
+<header>
+    <h1>this is my webpage1</h1>
+    <h3>this is my webpage2</h3>
+  </header>
+
+=> <main> represents the body of the document
+it should not use more than once in a document.
+ <main>
+  <article>
+    <h1>webpage1</h1>
+    <p>this is my webpage1</p>
+  </article>
+
+  <article>
+    <h1>webpage2</h1>
+    <p>Fthis is my webpage2</p>
+  </article>
+</main>
+
+=><nav> repredsents links to othe pages or parts of the page
+<nav>
+
+<li><a href="home.html">Home</a></li>
+
+ <li><a href="blog.html">Blog</a></li>
+
+<li><a href="news.html">News</a></li>
+ 
+ </nav>
+
+=><mark> uses to highlight particular part of the text
+<p>this is <mark>my webpage</mark></p>
+
+=><section> 
+
+
+=><summary> is used tohide the additional info/details. then can be viewed by clicking visible heading
+<details>
+  <summary>Some details</summary>
+  <p>More info about the details.</p>
+</details>
+
+=><time> defines date and time, so that user can set a reminder.
+<p>The concert starts at <time>20:00</time>.</p>
+<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+
+[6] what are form and what is form validation in html?
+=>form is used to collect the input. 
+inputs can be text, radio, submit..
+form validation can be automatically performed by the browser.
+it alerts the user if input field is empty or filled with unvalid information.
+<html>
+<head>
+<title>
+Form Validation using required attribute
+</title>
+</head>
+<body>
+<center>
+<form>
+<input type="text" placeholder="Enter your First_Name" required="required"><br><br>
+<input type="text" placeholder="Enter your Last_Name" required="required"><br><br>
+<input type="submit" value="Submit">
+</form>
+</center>
+</body>
+</html>
+
+
+[7]differences between html4 and html5? explain in more details
+=>Application Programming Interfaces(API)
+HTML5 provides several new APIs which helps for better and improved web application development system
+HTML5 helps to eleminate any third party application to pplay audio/video
+=>Deletion of Unnecessary Elements
+HTML5 can also delete unnecessary elements
+many elements which represents presentation and visual aspect of a webpage are replaced by the appropriate ones
+For instance, in HTML5, the TT and U tags, acronym, applet, dir, font, strike and center etc. have been replaced by the CSS or Cascadian Style Sheets
+=>More Flexibility
+HTML5 has more flexibitlty in handling inaccurate syntax than HTML4
+=>New Elements
+HTML5 has many new elements which has a specified, useful and unique function
+These new elements include: Header,Footer,Section,Article,Nav,Aside
+=>More Powerful
+HTML is more powerful version than the previous versions.
+It can run video games in the browser on its own 
