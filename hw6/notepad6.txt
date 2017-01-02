@@ -1,0 +1,54 @@
+c 1) different types in css?
+ =>cascading style sheets(css) is a computer language which is used to wirte the rules/instructions. these helps the web browser how the web page should look like: layout, style..
+ there are three types os css. they are:
+ external style sheet, internal style sheet, inline style sheet
+
+External style sheet: these are the separate files with  full of css instructions(.css extension).
+ we can change entire look of the page by changing just one file.
+ each page must include a reference to the external style sheet inside the <link> element.
+ this <link> should be included in <head>
+
+Internal style sheet: it is placed in the top of the document.
+it is defined within <style> element, inside the <head> of html page
+
+Inline style sheet:this is used to apply a unique style for a single element.
+style attribute is added to the particular element
+
+
+2) what is cascading in css?
+=>Cascading Style Sheets or CSS are set up so that you can have many properties all affecting the same element
+some of the properties may conflict with each other
+for instance we set a font color of red on the paragraph tag and then later on set a font color of blue.
+cascading will tell the browser to know which color to make the paragraph 
+
+3)why do we need to use css?
+=>Use CSS to define styles for your documents, including the design, layout ...
+we can place our CSS in the <head> of a document with an embedded style sheet, or attach a separate file that defines your styles with an external style sheet.
+add a link to the style sheet in the <head> of the document for  external style sheet
+this helps in avoid duplication, makes maintenance easier and allows you to make a site-wide change in one place
+
+4) which type of css is a better practice?
+=>External Stylesheet
+The external stylesheet is the best option. If you have all your styles in the external stylesheet then it makes it so easy to change things.
+
+Say you wanted to change the font used. With an external stylesheet you just change it in one spot and all the pages are changed! This is called as sitewide change.
+
+Another advantage of an external stylesheet is that it saves on coding. You can set styles for all your general HTML elements and special styles in one spot and recycle them from one location sitewide.
+
+
+
+5)what are selectors and why do we need them in css?
+=>Selectors define to which elements a set of CSS rules apply.
+In CSS, selectors are patterns used to select the element(s) you want to style.
+Type selectors:
+This basic selector chooses all elements that matches the given name.
+Syntax: eltname
+Class selectors:
+This basic selector chooses elements based on the value of their class attribute.
+Syntax: .classname
+ID selectors:
+This basic selector chooses nodes based on the value of its id attribute. There should be only one element with a given ID in a document.
+Syntax: #idname
+Attribute selectors:
+This basic selector chooses nodes based on the value of one of its attributes.
+Syntax: [attr=value]
