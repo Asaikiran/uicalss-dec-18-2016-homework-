@@ -1,0 +1,148 @@
+1) what are media queries? 
+=>media quueries are used to check many things, like:
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+media queries are the most popular technique used for tailoring style sheet for various devices
+
+
+2) In media queries what are following properties min-width, max-width, resolution, screen, print, speech, with examples?
+=>min-width:
+the minimum width of the display area, such as a browser window
+
+max-width:
+the maximum width of the display area, such as a browser window
+
+resolution: the resolution of the output device, using dpi or dpcm
+
+screen:Used for computer screens, tablets, smart-phones etc.
+
+print:Used for printers
+
+speech:Used for screenreaders that "reads" the page out loud
+
+
+3) what are position property values in css (static, relative, absolute, fixed) explain differences ? 
+=>The position property specifies the type of positioning method used for an element.
+There are four different position values:
+static
+relative
+fixed
+absolute
+position: static;
+it is always positioned according to the normal flow of the page
+Static positioned elements are not affected by the top, bottom, left, and right properties
+position: relative;
+An element with position: relative; is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position
+position: fixed;
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled
+position: absolute;
+Do not leave space for the element.
+Absolutely positioned boxes can have margins, and they do not collapse with any other margins.
+
+
+
+
+4) what is a float and clear property in css?
+=>The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.
+Values
+left:indicates the element must float on the left side of its containing block.
+right:indicates the element must float on the right side of its containing block.
+none:Is a keyword indicating that the element must not float.
+inline-start:indicates the element must float on the start side of its containing block
+inline-end:indicates the element must float on the end side of its containing block
+
+The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.
+none:indicates the element is not moved down to clear past floating elements.
+left:indicates the element is moved down to clear past left floats.
+right:indicates the element is moved down to clear past right floats.
+both:indicates the element is moved down to clear past both left and right floats.
+inline-start:indicates the element is moved down to clear floats on start side of its containing block
+inline-end:indicates the element is moved down to clear floats on end side of its containing block
+
+
+
+5) what is bootstrap grid system? rows and columns?
+=>Bootstrap's grid system allows up to 12 columns across the page.
+If we do not want to use all 12 column individually, we can group the columns together to create wider columns
+colums are arranged depending on the screen size
+The Bootstrap grid system has four classes:
+xs (for phones)
+sm (for tablets)
+md (for desktops)
+lg (for larger desktops)
+The classes above can be combined to create more dynamic and flexible layouts.
+Rows must be placed within a .container(fixed-width) or .container-fluid (full-width) for proper alignment and padding
+Use rows to create horizontal groups of columns
+Columns create gutters (gaps between column content) via padding
+Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three equal columns would use three .col-sm-4
+Predefined classes like .row and .col-sm-4 are available for quickly making grid layouts
+
+
+6) what are xs, sm, md, lg in bootstrap?
+=>Small Devices:
+Small devices are defined as having a screen width from 768 pixels to 991 pixels.
+columns to be split 25%/75% for small devices.
+For small devices we will use the .col-sm-* classes.
+Now Bootstrap is going to say "at the small size, look for classes with -sm- in them and use those
+The result will be 25%/75% split on small (and medium and large) devices. On extra small devices, it will automatically stack (100%)
+Medium Devices:
+Medium devices are defined as having a screen width from 992 pixels to 1199 pixels.
+medium devices the design may be better as a 50%/50% split.
+For medium devices we will use the .col-md-* classes.
+Now Bootstrap is going to say "at the small size, look at classes with -sm- in them and use those. At the medium size, look at classes with -md- in them and use those"
+The result will be 25%/75% split on small devices and a 50%/50% split on medium (and large) devices. On extra small devices, it will automatically stack (100%)
+Large Devices:
+Large devices are defined as having a screen width from 1200 pixels and above.
+large devices the design may be better as a 33%/66% split.
+For large devices we will use the .col-lg-* classes.
+Now Bootstrap is going to say "at the small size, look at classes with -sm- in them and use those. At the medium size, look at classes with -md- in them and use those. At the large size, look at classes with the word -lg- in them and use those"
+The result will be 25%/75% split on small devices, a 50%/50% split on medium devices, and a 33%/66% split on large devices
+
+
+ 7) differences between container and container-fluid? 
+ =>The .container class provides a responsive fixed width container
+The .container-fluid class provides a full width container, spanning the entire width of the viewport
+.container has specific pixel width values that change its width value with the help of media queries.
+.container-fluid has 100% width
+.container resizes in chunks at several certain widths (fixed width) because pixels are specified, controlled by media queries.
+.container-fluid continuously resizes as you change the width of your window/browser by any amount, leaving no extra empty space on the sides ever
+
+
+
+8) what are the break points to be use in media queries for mobile, tablets, medium size desktops and large desktops?
+=>   @media only screen and (min-width : 320px) {
+     /* 
+     Custom, iPhone Retina
+      */ 
+    }
+
+    
+    @media only screen and (min-width : 480px) {
+    /* 
+    Extra Small Devices, Phones 
+    */ 
+    }
+
+    
+    @media only screen and (min-width : 768px) {
+    /* 
+    Small Devices, Tablets 
+    */
+    }
+
+    
+    @media only screen and (min-width : 992px) {
+    /*
+     Medium Devices, Desktops 
+    */
+    }
+
+   
+    @media only screen and (min-width : 1200px) {
+     /*
+      Large Devices, Wide Screens 
+     */
+    }
