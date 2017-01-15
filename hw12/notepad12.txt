@@ -1,0 +1,91 @@
+1) what are the data types in javascript?
+=>The typeof operator can return one of these primitive types:
+
+string
+number
+boolean
+null
+undefined
+
+string: A string (or a text string) is a series of characters 
+Strings are written with quotes. You can use single or double quote
+var answer = "It's alright";             // Single quote inside double quotes
+var answer = "He is called 'Johnny'";    // Single quotes inside double quotes
+var answer = 'He is called "Johnny"';    // Double quotes inside single quotes
+
+Numbers:Numbers can be written with, or without decimals
+var x1 = 34.00;     // Written with decimals
+var x2 = 34;        // Written without decimals
+
+Booleans:Booleans can only have two values: true or false
+var x = true;
+var y = false;
+
+Null:In JavaScript null is "nothing"
+we can empty an object by setting it to null
+in JavaScript, the data type of null is an object
+var person = null; 
+
+Undefined:In JavaScript, a variable without a value, has the value undefined.The typeof is also undefined.
+var person;                // Value is undefined, type is undefined
+
+
+
+2) what are the diff between java and javascript especially in terms of variables
+=>Java is an Object Oriented Programming (OOP) language
+JavaScript is a scripting language, which contains a much smaller and simpler set of commands than does Java
+Java creates applications that run in a virtual machine or browser while JavaScript code is run on a browser only.
+Java code needs to be compiled while JavaScript code are all in text.
+Java is considered a compiled programming language. JavaScript is considered an interpreted scripting language.
+Java uses static type checking, where the type of a variable is checked at compile-time. The programmer must specify the type (integer, double, string, etc.) of any variable they create
+JavaScript, like most scripting languages, uses dynamic typing, where type safety is verified at runtime. It is not required for a programmer to specify the type of any variable they create
+There are three types of variables in java: local, instance and static.
+ Local Variable:A variable which is declared inside the method is called local variable.
+
+ Instance Variable:A variable which is declared inside the class but outside the method, is called instance variable . It is not declared as static.
+
+ Static variable:A variable that is declared as static is called static variable. It cannot be local
+
+All JavaScript variables must be identified with unique names(identifiers)
+Names can contain letters, digits, underscores, and dollar signs.
+Names must begin with a letter
+Names can also begin with $ and _ 
+Names are case sensitive 
+Reserved words (like JavaScript keywords) cannot be used as names
+
+
+
+3) why do we use javascript in web pages?
+=>While HTML markup language allows web developers to format content, JavaScript allows them to make the page dynamic
+it allows you to make things happen in the user's browser without sending messages back and forth to the server.
+it adds behaviour to the web page where the web page is capable of responding to actions by our visitors without needing to load a new web page in order to process their request.
+we can even have the ​JavaScript load new images, objects, or scripts into the web page without needing to reload the entire page
+
+
+4) how to include javascript into web pages?
+=>we can add a script(<script> element) anywhere inside the head or body sections of our document
+Most scripts can go inside the document head. This keeps them out of the way of the main document content
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+
+If our script needs to run at a certain stage during page layout it should be put at the correct stage of the document
+If the script is very small, then put it all where it will be used. If it is larger, then put it inside the head inside a function, and you can then call that function when you need it
+If our script is used on more than one page, or if it is of any significant size, then put it in its own file, and load it in the document head.
+
+<script src="myScript.js"></script>
+Placing scripts in external files has some advantages:
+
+It separates HTML and code
+It makes HTML and JavaScript easier to read and maintain
+Cached JavaScript files can speed up page loads
+
+
+5) where to include javascript in web pages and why?
+=>we  include our JavaScript files within the head element
+However, another alternative approach started figuring on the web where we can included our JavaScript files just before the closing body tag 
+There are a number of reasons why this way of doing it is attractive:
+There’s no need to have a check if the DOM(Document Object Model) is loaded, since by having the scripts at the end
+A JavaScript script file has to be loaded completely before a web browser even begins on the next JavaScript file
+if the JavaScript files are included at the top of the document,it will be a visual delay before the end user sees the actual page 
+This is completely avoided if you include the JavaScript files at the end of the document.
