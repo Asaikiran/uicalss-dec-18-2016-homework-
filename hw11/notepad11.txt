@@ -1,0 +1,86 @@
+1) display property values?
+=>The display property specifies the type of box used for an HTML element.
+
+inline: Displays an element as an inline element
+block: 	Displays an element as a block element
+inline-block: Displays an element as an inline-level block container. 
+flex: specifies the length of the item.
+run-in: Displays an element as either block or inline, depending on context
+none: The element will not be displayed at all
+initial: Sets this property to its default value
+inherit:a property should inherit its value from its parent element
+
+
+
+2) display none and visibility hidden differences in css? when do you use either one of them?
+=>display none:Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there
+display visibility hidden:However, the element will still take up the same space as before. The element will be hidden, but still affect the layout
+
+
+
+3) css box model?
+=>In CSS, the term "box model" is used when talking about design and layout.
+It consists of: margins, borders, padding, and the actual content
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+div {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+
+
+4) box sizing in css?
+=>The box-sizing property is used to tell the browser what the sizing properties (width and height) should include.
+By default, the width and height of an element is calculated like this:
+
+width + padding + border = actual width of an element
+height + padding + border = actual height of an element
+This means: When we  set the width/height of an element, the element often appear bigger than we  have set
+div {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue; 
+}
+
+
+
+5) what SASS?
+=>Sass: Syntactically Awesome Style Sheets
+these are the reasons to use sass
+ VARIABLES
+Sass provides variables as a way to store information that we  want to reuse throughout your style sheet.
+the way we declare a variable is with a dollar sign $ followed by the name
+Now we  can store that color value or long font stack as something easy to remember
+
+@IMPORT
+Sass, is a preprocessor that will pull in that file before it compiles the CSS.
+The result is one CSS page that is handled by one HTTP request.
+
+COLOR FUNCTIONS
+It will allow color changes to be much more fluid and easy
+we call them on the color with a percentage value between 0 and 100
+darken( $base-color, 10% )
+lighten( $base-color, 10% )
+
+MIXINS
+Mixins make groups of CSS declarations that we can reuse throughout our site
+Instead of typing the same property over and over we write a mixin once then call that mixin anytime we want to use it
+To declare a mixin we use the @mixin keyword
+
+@EXTEND
+@extend is one of the most useful features that allows us to share a set of CSS properties from one selector to another
+
+
+6) what is preprocessor? why do you need to use preprocessor?
+=>preprocessor is a program that processes its input data to produce output that is used as input to another program
+Nested syntax
+Ability to define variables
+Ability to define mixins
+Mathematical functions
+Operational functions (such as “lighten” and “darken”)
+Joining of multiple files
