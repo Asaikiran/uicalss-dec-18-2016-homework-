@@ -1,0 +1,200 @@
+1) operational precedence?
+=>When two operators share an operand the operator with the higher precedence goes first.
+For example, multiplication and division have a higher precedence than addition and subtraction [ 1 + 2 * 3 is treated as 1 + (2 * 3),]
+When an expression has two operators with the same precedence, the expression is evaluated according to its associativity
++ --> number,string
+- --> number
+/ --> number
+* --> number
+
+
+2) truthy value and falsy value
+=>JavaScript has a Boolean data type. It can only take the values true or false
+we can use the Boolean() function to find out if an expression (or a variable) is true
+Everything With a "Real" Value is True
+number(positive and negative)
+decimal
+text
+contions and
+comparisions
+
+Everything Without a "Real" is False
+0
+empty string("")
+undefined
+null
+NaN(not a number)
+
+
+3) logical and(&&), logical or(||)?
+=>Logical operators are typically used with Boolean (logical) values. When they are, they return a Boolean value
+Logical operators are typically used with Boolean (logical) values. When they are, they return a Boolean value
+
+Logical AND (&&):Returns expr1 if it can be converted to false; otherwise, returns expr2. 
+Thus, when used withBoolean values, && returns true if both operands are true; otherwise, returns false
+expr1 && expr2
+EX:a1 = true  && true      // t && t returns true
+a2 = true  && false     // t && f returns false
+
+Logical OR (||):Returns expr1 if it can be converted to true; otherwise, returns expr2.
+Thus, when used with Boolean values, || returns true if either operand is true.
+expr1 || expr2
+Ex:o1 = true  || true       // t || t returns true
+o2 = false || true       // f || t returns true
+
+
+4) conditions in javascript? 
+=>In JavaScript we have the following conditional statements:
+if
+else
+else if
+switch
+
+The if Statement:Use the if statement to specify a block of JavaScript code to be executed if a condition is true.
+Uppercase letters (If or IF) will generate a JavaScript error.
+Syntax
+if (condition) {
+    block of code to be executed if the condition is true
+}
+Ex:if (hour < 18) {
+    greeting = "Good day";
+}
+
+
+The else Statement:Use the else statement to specify a block of code to be executed if the condition is false.
+
+syntax:
+if (condition) {
+    block of code to be executed if the condition is true
+} else { 
+    block of code to be executed if the condition is false
+}
+Ex:if (hour < 18) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+
+The else if Statement
+Use the else if statement to specify a new condition if the first condition is false.
+
+Syntax
+if (condition1) {
+    block of code to be executed if condition1 is true
+} else if (condition2) {
+    block of code to be executed if the condition1 is false and condition2 is true
+} else {
+    block of code to be executed if the condition1 is false and condition2 is false
+}
+Ex:if (time < 10) {
+    greeting = "Good morning";
+} else if (time < 20) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+
+
+The Switch Statement:
+The switch statement is used to perform different actions based on different conditions.
+Use the switch statement to select one of many blocks of code to be executed.
+The switch statement is often used together with a break or a default keyword (or both). These are both optional
+The break keyword will stop the execution of more execution of code and/or case testing inside the block
+The default keyword specifies some code to run if there is no case match. There can only be one default keyword in a switch. Although this is optional, it is recommended that you use it, as it takes care of unexpected cases
+Syntax
+switch(expression) {
+    case n:
+        code block
+        break;
+    case n:
+        code block
+        break;
+    default:
+        default code block
+}
+Ex:var text;
+switch (new Date().getDay()) {
+    case 6:
+        text = "Today is Saturday";
+        break; 
+    case 0:
+        text = "Today is Sunday";
+        break; 
+    default: 
+        text = "Looking forward to the Weekend";
+}
+
+
+5) (post and pre) increment and (post and pre) decrement?
+=>It is one of the variation of “Arithmetic Operator
+Increment Operator is Used to Increment Value Stored inside Variable on which it is operating.
+Decrement Operator is used to decrement value of Variable by 1 (default).
+Types of Increment and Decrement Operator :
+Pre Increment / Pre Decrement Operator
+Post Increment / Post Decrement Operator
+
+Pre-Increment Operator :
+Pre-increment adds 1 to the value. The value is returned after the increment is made.
+Example a = 1; b = ++a;
+After execution of above statements value of variable a is 2 and value of b is 2.
+
+Post-Increment Operator:
+Post-increment adds 1 to the value. The value is returned before the increment is made. 
+Example  a = 1;  b = a++; 
+After execution of above statements value of variable a is 2 and value of b is 1
+
+Pre-decrement operator:
+Pre-decrement subtracts 1 from the value. The value is returned after the decrement is made.
+Example a = 1; b = --a;
+After execution of above statements value of variable a is 0 and value of b is 0
+
+post-decrement operator:
+Post-decrement subtracts 1 from the value. The value is returned before the decrement is made.
+Example a = 1; b = a--;
+After execution of above statements value of variable a is 0 and value of b is 1
+
+
+
+6) loops (while, do while, for loop)?
+=>loops are used to run the same block of code over and over again in a row.
+while Loop:
+The while loop executes a block of code as long as the specified condition is true.
+Syntax
+while (condition is true) {
+    code to be executed;
+}
+EX:<?php  
+$x = 1;
+ 
+while($x <= 5) {
+  echo "The number is: $x <br>";
+  $x++;
+} 
+?> 
+
+do while:
+The do while loop will always execute the block of code once, it will then check the condition, and repeat the loop while the specified condition is true.
+Syntax
+do {
+    code to be executed;
+} while (condition is true);
+EX:<?php 
+$x = 1; 
+
+do {
+    echo "The number is: $x <br>";
+    $x++;
+} while ($x <= 5);
+?>
+
+for loop:
+The for loop is often the tool you will use when you want to create a loop.
+syntax:
+for (statement 1; statement 2; statement 3) {
+    code block to be executed
+}
+EX:for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
