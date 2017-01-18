@@ -1,0 +1,769 @@
+number methods:
+=>Number.isFinite(): it determines whether the passed value is a finite number.
+Syntax: Number.isFinite(value)
+
+Number.isInteger():it determines whether the passed value is an integer.
+Syntax: Number.isInteger(value)
+
+Number.isNaN():it determines whether the passed value is NaN. 
+Syntax:Number.isNaN(value)
+
+Number.isSafeInteger():it determines whether the provided value is a number that is a safe integer. A safe integer is an integer that:
+can be exactly represented as an IEEE-754 double precision number, and
+whose IEEE-754 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation
+Syntax:Number.isSafeInteger(testValue)
+
+Number.parseFloat():it parses a string argument and returns a floating point number
+Syntax:Number.parseFloat(string)
+
+Number.parseInt(): it parses a string argument and returns an integer of the specified radix or base.
+Syntax:Number.parseInt(string,[ radix ])
+
+Number.prototype.toExponential():it returns a string representing the Number object in exponential notation.
+Syntax:numObj.toExponential([fractionDigits])
+
+Number.prototype.toFixed(): it formats a number using fixed-point notation
+Syntax:numObj.toFixed([digits]) 
+
+Number.prototype.toLocaleString():it returns a string with a language sensitive representation of this number.
+Syntax:numObj.toLocaleString([locales [, options]])
+
+Number.prototype.toPrecision():it  returns a string representing the Number object to the specified precision.
+Syntax:numObj.toPrecision([precision])
+
+Number.prototype.toSource():it returns a string representing the source code of the object.
+Syntax:numObj.toSource()
+Number.toSource()
+
+Number.prototype.toString():it returns a string representing the specified Number object.
+syntax:numObj.toString([radix])
+
+Number.prototype.valueOf():itreturns the wrapped primitive value of a Number object
+syntax:numObj.valueOf()
+
+
+array methods:
+Array.from():it creates a new Array instance from an array-like or iterable object.
+Syntax:Array.from(arrayLike[, mapFn[, thisArg]])
+
+Array.isArray():it determines whether the passed value is an Array.
+Syntax:Array.isArray(obj)
+
+Array.of():it creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.
+Syntax:Array.of(element0[, element1[, ...[, elementN]]])
+
+Array.prototype.concat():it is used to merge two or more arrays.
+Syntax:var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+
+Array.prototype.copyWithin():it  copies part of an array to another location in the same array and returns it, without modifying its size.
+Syntax:arr.copyWithin(target)
+arr.copyWithin(target, start)
+arr.copyWithin(target, start, end)
+
+Array.prototype.entries():it returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+Syntax:a.entries()
+
+Array.prototype.every():it  tests whether all 
+elements in the array pass the test implemented by the provided function.
+Syntax:arr.every(callback[, thisArg])
+
+Array.prototype.fill():it fills all the elements of an array from a start index to an end index with a static value.
+Syntax:arr.fill(value)
+arr.fill(value, start)
+arr.fill(value, start, end)
+
+Array.prototype.filter():it creates a new array with all elements that pass the test implemented by the provided function.
+Syntax:var new_array = arr.filter(callback[, thisArg])
+
+Array.prototype.find(): returns a value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned
+Syntax:arr.find(callback[, thisArg])
+
+Array.prototype.findIndex():it returns an index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned.
+Syntax:arr.findIndex(callback[, thisArg])
+
+Array.prototype.forEach():it  executes a provided function once for each array element.
+Syntax:arr.forEach(callback[, thisArg])
+
+Array.prototype.includes():it determines whether an array includes a certain element, returning true or false as appropriate.
+Syntax:arr.includes(searchElement)
+arr.includes(searchElement, fromIndex)
+
+Array.prototype.indexOf():it returns the first index at which a given element can be found in the array, or -1 if it is not present.
+Syntax:arr.indexOf(searchElement)
+arr.indexOf(searchElement, fromIndex)
+
+Array.prototype.join():it joins all elements of an array (or an array-like object) into a string.
+Syntax:arr.join()
+arr.join(separator)
+
+Array.prototype.keys(): it returns a new Array Iterator that contains the keys for each index in the array.
+Syntax:arr.keys()
+
+Array.prototype.lastIndexOf():it  returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+Syntax:arr.lastIndexOf(searchElement)
+arr.lastIndexOf(searchElement, fromIndex)
+
+Array.prototype.map():it creates a new array with the results of calling a provided function on every element in this array
+Syntax:var new_array = arr.map(callback[, thisArg])
+
+Array.prototype.pop(): it removes the last element from an array and returns that element. This method changes the length of the array.
+Syntax:arr.pop()
+
+Array.prototype.push(): it adds one or more elements to the end of an array and returns the new length of the array.
+Syntax:arr.push([element1[, ...[, elementN]]])
+
+Array.prototype.reduce():it applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+Syntax:arr.reduce(callback, [initialValue])
+
+Array.prototype.reduceRight():it applies a function against an accumulator and each value of the array (from right-to-left) has to reduce it to a single value.
+Syntax:arr.reduceRight(callback[, initialValue])
+
+Array.prototype.reverse():it reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+Syntax:a.reverse()
+
+Array.prototype.shift():it  removes the first element from an array and returns that element. This method changes the length of the array
+Syntax:arr.shift()
+
+Array.prototype.slice():it returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.
+Syntax:
+arr.slice()
+arr.slice(begin)
+arr.slice(begin, end)
+
+Array.prototype.some():it  tests whether some element in the array passes the test implemented by the provided function.
+Syntax:arr.some(callback[, thisArg])
+
+Array.prototype.sort():it sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points
+Syntax:
+arr.sort()
+arr.sort(compareFunction)
+
+Array.prototype.splice():it  changes the content of an array by removing existing elements and/or adding new elements.
+Syntax:
+array.splice(start)
+array.splice(start, deleteCount)
+array.splice(start, deleteCount, item1, item2, ...)
+
+Array.prototype.toLocaleString():it returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods and these Strings are separated by a locale-specific String (such as a comma “,”).
+Syntax:
+arr.toLocaleString();
+arr.toLocaleString(locales);
+arr.toLocaleString(locales, options);
+
+Array.prototype.toSource():it returns a string representing the source code of the array.
+Syntax:
+arr.toSource()
+
+Array.prototype.toString():it returns a string representing the specified array and its elements.
+Syntax:arr.toString()
+
+Array.prototype.unshift():it  adds one or more elements to the beginning of an array and returns the new length of the array.
+Syntax: arr.unshift([element1[, ...[, elementN]]])
+
+Array.prototype.values():it  returns a new Array Iterator object that contains the values for each index in the array.
+Syntax: arr.values()
+
+Array.prototype[@@iterator]():The initial value of the @@iterator property is the same function object as the initial value of the values() property.
+Syntax: arr[Symbol.iterator]()
+
+get Array[@@species]:The Array[@@species] accessor property returns the Array constructor.
+Syntax:
+Array[Symbol.species]
+
+
+Array Properties:
+
+Array.length:the array length property sets or returns the number of elements in an array
+
+Array.prototype:it represents the prototype for the Array constructor and allows you to add new properties and methods to all Array objects. 
+these are some of the prototypes:
+Array.prototype.copyWithin():Copies array elements within the array.
+Array.prototype.fill(): Fills all the elements of an array 
+Array.prototype.pop():Removes the last element from an array and returns that element.
+
+Array.prototype[@@unscopables]:it contains property names that were not included in the ECMAScript standard prior to the ES2015 version. These properties are excluded from with statement(extends the scope chain for a statement) bindings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
