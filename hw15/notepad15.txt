@@ -1,0 +1,395 @@
+string methods:
+
+String.fromCharCode():it returns a string created by using the specified sequence of Unicode values.
+Syntax:String.fromCharCode(num1[, ...[, numN]])
+
+String.fromCodePoint(): it returns a string created by using the specified sequence of code points.
+Syntax:String.fromCodePoint(num1[, ...[, numN]])
+
+String.prototype.anchor():it creates an <a> HTML anchor element that is used as a hypertext target.
+Syntax:str.anchor(name)
+
+String.prototype.big()it creates a <big> HTML element that causes a string to be displayed in a big font.
+Syntax:str.big()
+
+String.prototype.blink():it creates a <blink> HTML element that causes a string to blink.
+Syntax:str.blink()
+
+String.prototype.bold():it creates a <b> HTML element that causes a string to be displayed as bold.
+Syntax:str.bold()
+
+String.prototype.charAt():it returns the specified character from a string.
+Syntax:str.charAt(index)
+
+String.prototype.charCodeAt():it returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.If we want the entire code point value, use codePointAt().
+Syntax:str.charCodeAt(index)
+
+String.prototype.codePointAt():it returns a non-negative integer that is the Unicode code point value.
+Syntax:str.codePointAt(pos)
+
+String.prototype.concat():it combines the text of one or more strings and returns a new string.
+Syntax:str.concat(string2[, string3, ..., stringN])
+
+String.prototype.endsWith(): it determines whether a string ends with the characters of another string, returning true or false as appropriate.
+Syntax:str.endsWith(searchString[, position])
+
+String.prototype.fixed():it creates a <tt> HTML element that causes a string to be displayed in fixed-pitch font.
+Syntax:str.fixed()
+
+String.prototype.fontcolor():it creates a <font> HTML element that causes a string to be displayed in the specified font color.
+Syntax:str.fontcolor(color)
+
+String.prototype.fontsize():it creates a <font> HTML element that causes a string to be displayed in the specified font size.
+Syntax:str.fontsize(size)
+
+String.prototype.includes():it determines whether one string may be found within another string, returning true or false as appropriate.
+Syntax:str.includes(searchString[, position])
+
+String.prototype.indexOf():it returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found
+Syntax:str.indexOf(searchValue[, fromIndex])
+
+String.prototype.italics():it creates an <i> HTML element that causes a string to be italic.
+Syntax:str.italics()
+
+String.prototype.lastIndexOf():it  returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if the value is not found.
+Syntax:str.lastIndexOf(searchValue[, fromIndex])
+
+String.prototype.link():it creates a string representing the code for an <a> HTML element to be used as a hypertext link to another URL.
+Syntax:str.link(url)
+
+String.prototype.localeCompare():it returns a number indicating whether a reference string comes before or after or is the same as the given string in sort order..Negative when the referenceStr occurs before compareStr
+Positive when the referenceStr occurs after compareStr
+Returns 0 if they are equivalent
+Syntax:referenceStr.localeCompare(compareString[, locales[, options]])
+
+String.prototype.match():it retrieves the matches when matching a string against a regular expression.
+Syntax:str.match(regexp)
+
+String.prototype.normalize():it returns the Unicode Normalization Form of a given string (if the value isn't a string, it will be converted to one first).
+Syntax:str.normalize([form])
+
+String.prototype.padEnd():it pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the end (right) of the current string.
+Syntax:str.padEnd(targetLength [, padString])
+
+String.prototype.padStart():it pads the current string with a given string (eventually repeated) so that the resulting string reaches a given length. The pad is applied from the start (left) of the current string.
+Syntax:str.padStart(targetLength [, padString])
+
+String.prototype.repeat():it constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.
+Syntax:resultString = str.repeat(count);
+
+String.prototype.replace():it returns a new string with some or all matches of a pattern replaced by a replacement
+Syntax:str.replace(regexp|substr, newSubstr|function)
+
+String.prototype.search():it executes a search for a match between a regular expression and this String object.
+Syntax:str.search(regexp)
+
+String.prototype.slice():it extracts a section of a string and returns a new string.
+Syntax:str.slice(beginSlice[, endSlice])
+
+String.prototype.small():it creates a <small> HTML element that causes a string to be displayed in a small font.
+Syntax:str.small()
+
+String.prototype.split():it splits a String object into an array of strings by separating the string into substrings.
+Syntax:str.split([separator[, limit]])
+
+String.prototype.startsWith():it determines whether a string begins with the characters of another string, returning true or false as appropriate.
+Syntax:str.startsWith(searchString[, position])
+
+String.prototype.strike():it creates a <strike> HTML element that causes a string to be displayed as struck-out text.
+Syntax:str.strike()
+
+String.prototype.sub():it creates a <sub> HTML element that causes a string to be displayed as subscript.
+Syntax:str.sub()
+
+String.prototype.substr():it returns the characters in a string beginning at the specified location through the specified number of characters. 
+Syntax:str.substr(start [, length])
+
+String.prototype.sup():it  creates a <sup> HTML element that causes a string to be displayed as superscript.
+Syntax:str.sup()
+
+String.prototype.toLocaleLowerCase():it  returns the calling string value converted to lower case, according to any locale-specific case mappings.
+Syntax:str.toLocaleLowerCase()
+
+String.prototype.toLocaleUpperCase():it returns the calling string value converted to upper case, according to any locale-specific case mappings.
+Syntax:str.toLocaleUpperCase()
+
+String.prototype.toLowerCase():it  returns the calling string value converted to lower case.
+Syntax:str.toLowerCase()
+
+String.prototype.toSource():it returns a string representing the source code of the object.
+Syntax:String.toSource()
+str.toSource()
+
+String.prototype.toString():returns a string representing the specified object.
+Syntax:str.toString()
+
+String.prototype.trim():removes whitespace from both ends of a string.
+Syntax:str.trim()
+
+String.prototype.trimLeft(): removes whitespace from the left end of a string.
+Syntax:str.trimLeft()
+
+String.prototype.trimRight():removes whitespace from the right end of a string.
+Syntax:str.trimRight()
+
+String.prototype.valueOf():returns the primitive value of a String object.
+Syntax:str.valueOf()
+
+
+String.prototype[@@iterator]():returns a new Iterator object that iterates over the code points of a String value, returning each code point as a String value.
+Syntax:string[Symbol.iterator]
+
+
+properties:
+string.length:
+The length property represents the length of a string.
+Syntax:str.length
+
+String.prototype:
+The String.prototype property represents the String prototype object.
+
+these are some prototypes:
+
+String.prototype.charAt()
+Returns the character at the specified index.
+
+String.prototype.charCodeAt()
+Returns a number indicating the Unicode value of the character at the given index.
+
+String.prototype.codePointAt()
+Returns a non-negative integer that is the UTF-16 encoded code point value at the given position.
+
+String.prototype.concat()
+Combines the text of two strings and returns a new string.
+
+String.prototype.includes()
+Determines whether one string may be found within another string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
