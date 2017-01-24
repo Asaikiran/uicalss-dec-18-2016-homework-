@@ -1,0 +1,291 @@
+what are the different ways to create objects?
+=>There are different ways to create new objects:
+Define and create a single object, using an object literal.
+Define and create a single object, with the keyword new.
+Define an object constructor, and then create objects of the constructed type.
+
+Using an Object Literal:
+This is the easiest way to create a JavaScript Object
+An object literal is a list of name:value pairs (like age:24) inside curly braces {}.
+Example
+var person = {firstName:"saikiran", lastName:"alli", age:24, eyeColor:"black"};
+
+Using the JavaScript Keyword new
+here objects are created are declared individually
+for readability and execution speed use the object literal method
+Example
+var person = new Object();
+person.firstName = "saikiran";
+person.lastName = "alli";
+person.age = 24;
+person.eyeColor = "black";
+
+Using an Object Constructor:
+these helps to create many objects of one type.
+Example
+function person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+var myFather = new person("saikiran", "alli", 25, "black");
+var myMother = new person("Sally", "Rally", 48, "green");
+
+In JavaScript, the thing called this, is the object that "owns" the JavaScript code.
+
+
+
+what are properties in object?
+=>A JavaScript object is a collection of unordered properties.
+Properties can usually be changed, added, and deleted, but some are read only.
+propertyName and propertyValue pairs within object
+properties are seperated by comma
+propertyname and value are seperated by colon
+
+The syntax for accessing the property of an object is:
+objectName.property          // person.age
+or
+objectName["property"]       // person["age"]
+or
+objectName[expression]       // x = "age"; person[x]
+Example: 
+var text="hello world";
+var textlength= text.length
+document.write(textlength)   //result = 11
+length property is used to determine the length of string
+
+
+how to retrieve a property value in object?
+=>The JavaScript for...in statement loops through the properties of an object.
+The block of code inside of the for...in loop will be executed once for each property.
+Looping through the properties of an object:
+Syntax
+for (variable in object) {
+    code to be executed
+}
+
+
+
+how to add a property into object?
+=>add property helps to add value tp the property
+we can add new properties to an existing object by simply giving it a value.
+we can give new properties to the existing object
+To add a new property to an object, specify the object name followed by: a dot, the name of the new property, an equals sign, and the value for the new property (enclosed in quotes if it is a string)
+syntax:
+objectName.propertyName = value
+objectName('propertyName') = value
+Example
+person.nationality = "English";
+
+
+
+how to remove a property in object?
+=>The delete keyword deletes a property from an object:
+The delete keyword deletes both the value of the property and the property itself.
+After deletion, the property cannot be used before it is added back again.
+Example
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+delete person.age;   // or delete person["age"]; 
+syntax:
+delete objectName.propertyName 
+delete objectName('propertyName')
+
+how to update a property value in object?
+=>update property helps to push new values into the object
+it gives a new list of objects with modiifed object
+syntax:
+objectName.propertyName = value
+objectName('propertyName') = value
+
+
+how to check if a property exists within an object?
+=>The hasOwnProperty() method returns a boolean indicating whether the object has the specified property.
+This method can be used to determine whether an object has the specified property 
+syntax:
+object.hasOwnProperty('propertyName')
+-true -- then property exits
+-false -- then property doesnot exits
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
