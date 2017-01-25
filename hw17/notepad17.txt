@@ -1,0 +1,305 @@
+what is object.defineproperty? and all possible configuration options? description
+=>Object.defineProperty() method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+Syntax:
+Object.defineProperty(obj, prop, descriptor)
+
+obj -- object on which to define the property
+prop -- name of the property to be defined or modified
+descriptor -- descriptor forr the property being defined or modified
+
+Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors.it cannot be both.
+A data descriptor is a property that has a value, which may or may not be writable. 
+An accessor descriptor is a property described by a getter-setter pair of functions
+
+Both data and accessor descriptors are objects.they share the following required keys
+
+configurable: true if and only if property descriptor may be modified/deleted from corresponding objects
+defaults to false
+
+enumerable: true if and only if this property shows up during enumeration of the properties on the corresponding object.
+Defaults to false
+
+A data descriptor also has the following optional keys:
+
+value
+The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).
+Defaults to undefined.
+
+writable
+true if and only if the value associated with the property may be changed with an assignment operator.
+Defaults to false.
+
+An accessor descriptor also has the following optional keys
+
+get
+
+A function which serves as a getter for the property, or undefined if there is no getter.
+The function return will be used as the value of property.
+Defaults to undefined.
+
+set
+A function which serves as a setter for the property, or undefined if there is no setter
+The function will receive as only argument the new value being assigned to the property.
+Defaults to undefined.
+
+
+2) What is Object.defineProperties? and all possible configuration options? description?
+=>Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.
+
+Syntax
+Object.defineProperties(obj, props)
+
+obj
+The object on which to define or modify properties.
+
+props
+An object whose own enumerable properties constitute descriptors for the properties to be defined or modified
+
+Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors 
+
+Descriptors have the following keys:
+configurable
+true if and only if property descriptor may be deleted/modified from the corresponding object.
+
+enumerable
+true if and only if this property shows up during enumeration of the properties on the corresponding object.
+Defaults to false.
+
+writable
+true if and only if the value associated with the property may be changed with an assignment operator.
+Defaults to false.
+
+get
+A function which serves as a getter for the property, or undefined if there is no getter
+Defaults to undefined.
+
+set
+A function which serves as a setter for the property, or undefined if there is no setter.
+Defaults to undefined
+
+
+3) what is Object.create, Object.keys?
+=>Object.create()
+Object.create() method creates a new object with the specified prototype object and properties.
+
+SyntaxEDIT
+Object.create(proto[, propertiesObject])
+
+Parameters
+proto
+The object which should be the prototype of the newly-created object.
+
+propertiesObject
+Optional. If specified and not undefined
+
+
+Object.keys()
+Object.keys() method returns an array of a given object's own enumerable properties, in the same order as that provided by a for...in loop
+
+Syntax
+Object.keys(obj)
+
+Parameters
+obj
+The object whose enumerable own properties are to be returned.
+
+
+
+4) can we create object from functions?
+=>To define an object type, create a function for the object type that specifies its name, properties, and methods. 
+For example, suppose you want to create an object type for cars. You want this type of object to be called car, and you want it to have properties for make, model, and year.
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+
+
+
+
+5) what is a prototype? 
+=>A prototype is an early sample, model, or release of a product built to test a concept or process or to act as a thing to be replicated or learned from
+The standard way to create an object prototype is to use an object constructor function:
+Example
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+With a constructor function, you can use the new keyword to create new objects from the same prototype
+
+
+6) what is this keyword and its significance?
+=>the value of this is determined by how a function is called
+it can't be set by assignment during execution, and it may be different each time the function is called
+Syntax
+this
+
+In the global execution context (outside of any function), this refers to the global object, whether in strict mode or not.
+Ex:this.a = 37;
+console.log(window.a)
+
+
+7) what is window? 
+=>It represents the browser's window.
+All global JavaScript objects, functions, and variables automatically become members of the window object.
+Global variables are properties of the window object.
+Global functions are methods of the window object.
+Even the document object (of the HTML DOM) is a property of the window object:
+window.document.getElementById("header");
+is the same as:
+document.getElementById("header");
+
+Two properties can be used to determine the size of the browser window.
+Both properties return the sizes in pixels:
+window.innerHeight - the inner height of the browser window (in pixels)
+window.innerWidth - the inner width of the browser window (in pixels)
+
+
+8) also look into functions? and what is a callback function?
+=>function is a block of code designed to perform a particular task.
+function is executed when "something" invokes it (calls it).
+A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+sybtax
+function name(parameter1, parameter2, parameter3) {
+    code to be executed
+}
+
+callback function:
+JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.
+To prevent this, you can create a callback function.
+A callback function is executed after the current effect is finished.
+syntax: $(selector).hide(speed,callback);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
