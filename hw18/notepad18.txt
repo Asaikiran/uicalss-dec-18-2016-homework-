@@ -1,0 +1,107 @@
+1) what is call, apply and bind in javascript?
+=>call()
+The call() method calls a function with a given this value and arguments provided individually.
+the syntax of this function is almost identical to that of apply(), the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+Syntax
+fun.call(thisArg[, arg1[, arg2[, ...]]])
+Example
+function myFunction(a, b) {
+    return a * b;
+}
+myObject = myFunction.call(myObject, 10, 2);     // Will return 20
+
+apply()
+The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object).
+Syntax
+fun.apply(thisArg, [argsArray])
+Example
+function myFunction(a, b) {
+    return a * b;
+}
+myArray = [10, 2];
+myObject = myFunction.apply(myObject, myArray);  // Will also return 20
+
+bind()
+bind in javascript is a method -- Function.prototype.bind . 
+bind is a method. It is called on function prototype. This method creates a function whose body is similar to the function on which it is called but the 'this' refers to the first parameter passed to the bind method.
+Syntax
+fun.bind(thisArg[, arg1[, arg2[, ...]]])
+Ex:
+var foo = {
+    x: 3
+}
+
+var bar = function(){
+    console.log(this.x);
+}
+
+bar(); // undefined
+
+var boundFunc = bar.bind(foo);
+
+boundFunc(); // 3
+
+
+2) what is context in javascript?
+=>In JavaScript, “context” refers to an object. Within an object, the keyword “this” refers to that object, and provides an interface to the properties and methods that are members of that object
+When a function is executed, the keyword “this” refers to the object that the function is executed in.
+When a function executes in the global context, “this” refers to the global, or “window” object
+When a function is a method of an Object, “this” refers to that object
+When a function executes inside of another function, “this” refers to the object whose context within which it is executed
+When you instantiate a constructor function, inside of the instance object, “this” refers to the instance object
+EX:
+drink = 'hot coffee'; 
+var foo = {
+    drink: "cold coffee",
+    getDrink: function(){
+        return drink;
+    }    
+};
+ 
+console.log( foo.getDrink() ); // hot coffee
+
+
+3) what is lexical scope?
+=>The word lexical pertains to words or language. Thus the lexical scope of a function is statically defined by the function’s physical placement within the written source code.
+
+Consider the following example:
+var x = "global";
+ 
+function outer() {
+    var y = "outer";    
+ 
+    function inner() {
+        var x = "inner";    
+    }
+}
+Function inner is physically surrounded by function outer which in turn is wrapped by the global context
+The outer lexical scope of any given function is defined by its ancestors in the lexical hierarchy. Accordingly, the outer lexical scope of function inner comprises the global object and function outer.
+
+
+4) what is for in loop?
+=>for in - loops through the properties of an object
+Syntax
+for (variablename in object){
+   statement or block to execute
+}
+In each iteration, one property from object is assigned to variablename and this loop continues till all the properties of the object are exhausted.
+EX:
+var obj = {a:1, b:2, c:3};
+    
+for (var prop in obj) {
+  console.log('obj.' + prop, '=', obj[prop]);
+}
+
+
+5) difference between prototype and extends in javascript?
+
+prototype  displays the appearance and behavior of an application in the development lifecycle.
+
+The extends keyword is used in class declarations or class expressions to create a class, which is a child of another class
+
+Prototyping has several benefits: The software designer and implementer can get valuable feedback from the users early in the project.
+
+The extends keyword can be used to subclass custom classes as well as built-in objects.
+
+
+
