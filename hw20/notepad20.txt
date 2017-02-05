@@ -1,0 +1,126 @@
+1) what is IIFE? why do we need to use?
+=>It’s an Immediately-Invoked Function Expression, or IIFE for short. It executes immediately after it’s created.
+IFFE is just an anonymous function that is wrapped inside of a set of parentheses and called (invoked) immediately
+They can be used to guard against unintended effects of hoisting
+IIFEs can also be used to enforce private variables and methods
+Example:
+(function () {
+  return 5;
+} ());
+// returns 5 right away
+
+
+2) what is namespacing in java script? why do we need to use it?
+=>Namespace is a container for set of identifiers, functions, methods and all that. It gives a level of direction to its contents so that it will be well distinguished and organized.
+It doesn’t allow us to pollute our code base and makes it cleaner by grouping our code logically and avoiding unexpected and expected collision.
+To achieve this, what we need to do is to create a namespace in application and use it.
+
+
+3) what is module pattern?
+=>This pattern is used to mimic classes in conventional software engineering and focuses on public and private access to methods & variables
+The module pattern strives to improve the reduction of globally scoped variables, thus decreasing the chances of collision with other code throughout an application.
+EX:
+var encapsulatedNamespace = (function () {
+var privateVar = "Secret stuff",
+	privateFunction  = function () {
+		var result;
+		// do something with privateVar
+		return result;
+	},
+	someObject = {
+			privateMember : "Some private data",
+			publicMember : privateFunction() // assign the result of the privateFunction() call to publicMember
+	},
+
+	// expose only your public interface to the global scope
+	publicAPI = {
+			publicData : someObject.publicMember 
+	};
+
+	return publicAPI;
+}());
+
+
+4) is it a good practice to have too many global variables or functions ? why if yes ? why if no?
+=>Global variables and function names are an incredibly bad idea.
+The reason is that every JavaScript file included in the page runs in the same scope. 
+If you have global variables or functions in your code, scripts included after yours that contain the same variable and function names will overwrite your variables/functions.
+
+
+
+5) what are HTML dom events?
+=>HTML DOM events allow JavaScript to register different event handlers on elements in an HTML document.
+Events are normally used in combination with functions, and the function will not be executed before the event occurs
+Some of the HTML DOM are:
+Mouse Events
+onclick	The event occurs when the user clicks on an element	
+oncontextmenu	The event occurs when the user right-clicks on an element to open a context menu	
+ondblclick	The event occurs when the user double-clicks on an element	
+onmousedown	The event occurs when the user presses a mouse button over an element	
+onmouseenter	The event occurs when the pointer is moved onto an element	
+onmouseleave	The event occurs when the pointer is moved out of an element	
+onmousemove	The event occurs when the pointer is moving while it is over an element	
+onmouseover	The event occurs when the pointer is moved onto an element, or onto one of its children	
+onmouseout	The event occurs when a user moves the mouse pointer out of an element, or out of one of its children	
+onmouseup	The event occurs when a user releases a mouse button over an element	
+
+Keyboard Events
+onkeydown	The event occurs when the user is pressing a key	
+onkeypress	The event occurs when the user presses a key	
+onkeyup	The event occurs when the user releases a key
+
+
+
+6) what is an event listener in javascript? how can we configure them?
+=>The document.addEventListener() method attaches an event handler to the document.
+Syntax
+document.addEventListener(event, function, useCapture)
+Example
+document.addEventListener("click", myFunction);
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+
+
+7) what is event handler?
+=>event handlers are JavaScript code that are not added inside the <script> tags, but rather, inside the html tags, that execute JavaScript when something happens, such as pressing a button, moving your mouse over a link, submitting a form etc. The basic syntax of these event handlers is:
+
+name_of_handler="JavaScript code here"
+
+For example:
+<a href="http://google.com" onClick="alert('hello!')">Google</a>
+
+some of the most commonly used Event Handlers:
+onclick:	 	Use this to invoke JavaScript upon clicking (a link, or form boxes)
+onload:	 		Use this to invoke JavaScript after the page or an image has finished loading.
+onmouseover:	 	Use this to invoke JavaScript if the mouse passes by some link
+onmouseout:	 	Use this to invoke JavaScript if the mouse goes pass some link
+onunload:	 	Use this to invoke JavaScript right after someone leaves this page.
+
+
+
+8) what is event propagation? what bubbling and capturing?
+event propagation
+an elemnt can capture child events
+Javascript allows a single event to be handled by multiple event handlers defined at different levels of DOM hierarchy
+
+So the order of event handling in those two methods will be respectively :-
+Capture method :- First the handler on <ul> will be called and then the handler on <li>
+
+Bubble method :- First the handler on <li> will be called followed by handler on <ul>
+
+bubbling
+The main principle of bubbling states:
+After an event triggers on the deepest possible element, it then triggers on parents in nesting orde
+The bubbling guarantees that click on Div 3 will trigger onclick first on the innermost element 3 (also caled the target), then on the element 2, and the last will be element 1.
+The order is called a bubbling order, because an event bubbles from the innermost element up through parents, like a bubble of air in the water.
+
+
+capturing
+this is exactly opposite scenario of bubbling
+The part where you initiate the event and the event barrels down the DOM from the root is known as the Event Capturing Phase
+Captures down - through 1 -> 2 -> 3.
+ Using addEventListener with last argument true is only the way to catch the event at capturing.
+
+
